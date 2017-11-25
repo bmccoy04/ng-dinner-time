@@ -1,21 +1,17 @@
 <div style="width: 95%; margin:auto">
     <h2>Enter Dinner Items</h2>
     <mat-form-field>
-        <input matInput placeholder="Dinner Item">
+        <input matInput placeholder="Dinner Item" #dinerItem>
       </mat-form-field>
 &nbsp;
-  <button mat-mini-fab color="primary">
+  <button mat-mini-fab color="primary" (click)="save(dinnerItem)">
       <mat-icon >add</mat-icon>
   </button>
   
-  <mat-list>
+  <mat-list *ngFor="let item for items">
     <mat-list-item>
-      Item one
+      {item.Id}  {item.Name}
     </mat-list-item>
-    <mat-list-item >
-      Item two
-    </mat-list-item>
-
   </mat-list>
 </div>
   
