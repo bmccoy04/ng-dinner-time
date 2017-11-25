@@ -13,6 +13,7 @@ export class DinnerTimeComponent implements OnInit {
   ngOnInit() {
   }
   save(name:string):void{
+    console.log(name.trim());
     if(!name.trim())
       return;
     
